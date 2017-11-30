@@ -36,6 +36,7 @@ http://lbsyun.baidu.com/index.php?title=androidsdk/guide/tool/coordinate
 
 其中，3代表google,soso地图、aliyun地图、mapabc地图和amap地图所用坐标，国测局坐标，看来百度对坐标的转换是把这几种归为一类，其实google坐标系是wgs84坐标，国测局是国测局坐标，两个压根不是一个东西，这种转换可能考虑到国家安全的层面，所以在转换上比较简单粗暴。
 
+以下是index_baidu.html展示效果
 ![baidu](https://raw.githubusercontent.com/lhywell/book/master/map/map0002.png)
 
 ### 高德API
@@ -55,7 +56,12 @@ gps:GPS原始坐标；
 baidu：百度经纬度；
 mapbar：图吧经纬度；
 
+以下是index_gaode.html展示效果
+
 ![高德](https://raw.githubusercontent.com/lhywell/book/master/map/map0003.png)
+
+
+### 数据
 
 坐标系是纬度在前，经度在后，请复制到文本框中，点击转换按钮：
 
