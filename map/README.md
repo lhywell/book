@@ -2,10 +2,6 @@
 
 @(笔记)[百度地图|高德地图|坐标系转换]
 
-以下是我个人开发中的总结：
- 
-
-
 -------------------
 
 [TOC]
@@ -21,7 +17,9 @@
 
 ### 百度API 
 以下两种分别是JavaScript API 和 Android地图SDK API，说到的坐标系方面的知识，都是大同小异的，可以总结如下：
+
 http://lbsyun.baidu.com/index.php?title=jspopular/guide/coorinfo
+
 http://lbsyun.baidu.com/index.php?title=androidsdk/guide/tool/coordinate
 
 坐标知识介绍
@@ -38,11 +36,19 @@ http://lbsyun.baidu.com/index.php?title=androidsdk/guide/tool/coordinate
 
 ### 高德API
 关于高德坐标转换，有各种问题请参考
+
 http://lbs.amap.com/faq/web/javascript-api?wd=%E5%9D%90%E6%A0%87%E8%BD%AC%E6%8D%A2&cateId=&page=
+
 转换方法参考：
+
 http://lbsbbs.amap.com/forum.php?mod=viewthread&tid=724&extra=page%3D1
+
 http://lbs.amap.com/api/javascript-api/reference/lnglat-to-address/#m_AMap.convertFrom
+
 高德只提供了以下3种坐标转换到高德
+
 gps:GPS原始坐标；
+
 baidu：百度经纬度；
+
 mapbar：图吧经纬度；
