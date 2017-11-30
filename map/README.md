@@ -32,11 +32,11 @@ http://lbsyun.baidu.com/index.php?title=androidsdk/guide/tool/coordinate
 
 百度提供的官方方法是Convertor构造函数，里面有一个translate方法，提供了from,to参数，意思就是从一个坐标系转到另一个坐标系，其中from，to的定义如下
 
-https://github.com/lhywell/book/blob/master/map/map0001.png
+![baidu](https://raw.githubusercontent.com/lhywell/book/master/map/map0001.png)
 
 其中，3代表google,soso地图、aliyun地图、mapabc地图和amap地图所用坐标，国测局坐标，看来百度对坐标的转换是把这几种归为一类，其实google坐标系是wgs84坐标，国测局是国测局坐标，两个压根不是一个东西，这种转换可能考虑到国家安全的层面，所以在转换上比较简单粗暴。
 
-https://github.com/lhywell/book/blob/master/map/map0002.png
+![baidu](https://raw.githubusercontent.com/lhywell/book/master/map/map0002.png)
 
 ### 高德API
 关于高德坐标转换，有各种问题请参考
@@ -55,7 +55,7 @@ gps:GPS原始坐标；
 baidu：百度经纬度；
 mapbar：图吧经纬度；
 
-https://github.com/lhywell/book/blob/master/map/map0003.png
+![高德](https://raw.githubusercontent.com/lhywell/book/master/map/map0003.png)
 
 坐标系是纬度在前，经度在后，请复制到文本框中，点击转换按钮：
 
