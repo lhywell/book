@@ -271,7 +271,7 @@ function baidu() {
 
 /*********************通用方法转百度******************************************/
 
-function commonToBaidu(type, color) {
+function commonToBaidu(from, color) {
     var newArray = [];
     //坐标转换完之后的回调函数
     translateCallback = function(data) {
@@ -297,7 +297,7 @@ function commonToBaidu(type, color) {
         var pointArr = [];
         pointArr.push(new BMap.Point(lnglat[1], lnglat[0]));
 
-        convertor.translate(pointArr, type, 5, translateCallback)
+        convertor.translate(pointArr, from, 5, translateCallback)
         // polygonLnglats.push(new BMap.Point(lnglat[1], lnglat[0]));
         if (i == 0) {
             firstLng = lnglat[1];
