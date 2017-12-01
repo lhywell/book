@@ -29,14 +29,14 @@ http://lbsyun.baidu.com/index.php?title=androidsdk/guide/tool/coordinate
 
 坐标知识介绍
 
-国内主流坐标系类型主要有以下三种
+#### 国内主流坐标系类型主要有以下三种
 
 1. WGS84：为一种大地坐标系，也是目前广泛使用的GPS全球卫星定位系统使用的坐标系；简称（WGS84坐标）
 2. GCJ02：是由中国国家测绘局制订的地理信息系统的坐标系统，是由WGS84坐标系经加密后的坐标系；简称（国测局坐标）
 3. BD09：百度坐标系，在GCJ02坐标系基础上再次加密。其中BD09ll表示百度经纬度坐标，BD09mc表示百度墨卡托米制坐标。简称（百度坐标）
 在海外地区，统一使用WGS84坐标。开发者在使用百度地图相关服务时，请注意选择
 
-百度提供的官方方法是Convertor构造函数，里面有一个translate方法，提供了from,to参数，意思就是从一个坐标系转到另一个坐标系，其中from，to的定义如下
+#### 百度提供的官方方法是Convertor构造函数，里面有一个translate方法，提供了from,to参数，意思就是从一个坐标系转到另一个坐标系，其中from，to的定义如下
 
 ![baidu](https://raw.githubusercontent.com/lhywell/book/master/map/map0001.png)
 
@@ -47,21 +47,27 @@ http://lbsyun.baidu.com/index.php?title=androidsdk/guide/tool/coordinate
 ![baidu](https://raw.githubusercontent.com/lhywell/book/master/map/map0002.png)
 
 ### 高德API
-关于高德坐标转换，有各种问题请参考
 
-http://lbs.amap.com/faq/web/javascript-api?wd=%E5%9D%90%E6%A0%87%E8%BD%AC%E6%8D%A2&cateId=&page=
+高德地图API使用的坐标体系，为国测局规定的GCJ-02坐标系，是国内的标准坐标体系。区别于GPS坐标（WGS-84坐标系），是在其基础上进行了一次加密。
 
-转换方法参考：
+引用：http://lbs.amap.com/faq/top/coordinate/3/
 
-http://lbsbbs.amap.com/forum.php?mod=viewthread&tid=724&extra=page%3D1
 
-http://lbs.amap.com/api/javascript-api/reference/lnglat-to-address/#m_AMap.convertFrom
-
-高德只提供了以下3种坐标转换到高德
+#### 高德只提供了以下3种坐标转换到高德
 
 1. gps:GPS原始坐标；
 2. baidu：百度经纬度；
 3. mapbar：图吧经纬度；
+
+#### 关于高德坐标转换，有各种问题请参考
+
+http://lbs.amap.com/faq/web/javascript-api?wd=%E5%9D%90%E6%A0%87%E8%BD%AC%E6%8D%A2&cateId=&page=
+
+#### 转换方法参考：
+
+http://lbsbbs.amap.com/forum.php?mod=viewthread&tid=724&extra=page%3D1
+
+http://lbs.amap.com/api/javascript-api/reference/lnglat-to-address/#m_AMap.convertFrom
 
 以下是index_gaode.html展示效果
 
