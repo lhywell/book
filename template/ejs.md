@@ -182,4 +182,15 @@ app.listen(3000)
 ```
 可以看出ejs.renderFile和res.render功能是一样的，都是渲染
 
+#### 开发一个模板引擎
+
+http://www.expressjs.com.cn/advanced/developing-template-engines.html
+
+最重要的五个方法
+1. app.engine(ext, callback)
+2. fs.readFile()
+3. String.replace()
+4. app.set('views', './views'); // 指定视图所在的位置
+5. app.set('view engine', 'ntl'); // 注册模板引擎
+
 #### [ejs案例](https://github.com/mde/ejs/tree/master/examples)
