@@ -15,6 +15,16 @@ EJS 语法
 
 3. 注释：<%#开头
 
+```html
+<li><a href="foo"><% // double-slash comment %>foo</li>
+<li><a href="bar"><% /* C-style comment */ %>bar</li>
+<li><a href="baz"><% // double-slash comment with newline
+    %>baz</li>
+<li><a href="qux"><% var x = 'qux'; // double-slash comment @ end of line %><%= x %></li>
+<li><a href="fee"><%# ERB style comment %>fee</li>
+<li><a href="bah"><%= 'not a ' + '//' + ' comment' %></a></li>
+```
+
 4. 可以换行结束，例如：
 ```js
 <% random.forEach((c, i) => {
@@ -22,9 +32,14 @@ EJS 语法
 ```
 5. 空格
 <%_ _%>空格做截取
-
-<%for(var i = 0; i < fruits.length; ++i) {%>支持，
-<%_               for(var i = 0; i < fruits.length; ++i) {                  -%>这样也是支持的
+```js
+<%for(var i = 0; i < fruits.length; ++i) {%>
+```
+支持，
+```js
+<%_               for(var i = 0; i < fruits.length; ++i) {                  -%>
+```
+这样也是支持的
 
 #### Options
 
@@ -88,7 +103,7 @@ ejs.renderFile('./views/index.ejs', {
 
 #### 自定义分隔符
 
-自定义分隔符，默认是%，也可以使用其他符号<? ?><! !><# #>
+自定义分隔符，默认是%，也可以设置为其他符号<? ?><! !><# #>
 
 ```js
 var users = ['zhangsan', 'lisi']
