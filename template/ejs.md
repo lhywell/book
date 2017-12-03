@@ -1,9 +1,9 @@
 EJS 语法
 ====================
 
-1.ejs是嵌入式的Javascript模板引擎，服务器JS和浏览器都支持,官方文档http://ejs.co/
+1. ejs是嵌入式的Javascript模板引擎，服务器JS和浏览器都支持,官方文档http://ejs.co/
 
-2.[语法](https://github.com/mde/ejs/blob/master/docs/syntax.md)
+2. [语法](https://github.com/mde/ejs/blob/master/docs/syntax.md)
 
 基本格式：用肩括号百分号模板标签，必须封闭起来，中间可以写Javascript语法，<% %>，例如：<% for(var i = 0; i < fruits.length; ++i) {%>
 
@@ -21,8 +21,8 @@ EJS 语法
 <%               for(var i = 0; i < fruits.length; ++i) {                  %>这样也是支持的
 
 自定义分隔符，可以使用<? ?><! !><# #>
-------------
-2.ejs三种方法
+
+3. ejs三种方法
 
 ```js
 ejs.compile
@@ -53,7 +53,7 @@ ejs.renderFile('./views/index.ejs', {
 })
 ```
 
-3.自定义分隔符
+4. 自定义分隔符
 
 ```js
 var users = ['zhangsan', 'lisi']
@@ -65,12 +65,12 @@ console.log(ejs.render('<@= user @>', { user: users }, { delimiter: '@' }))
 ejs.delimiter = '$';
 ```
 
-4.include其他文件
+5. include其他文件
 ```js
 include(filename) //支持一个文件名
 include(variable) //支持一个变量，可以通过逻辑判断加载不同的文件
 ```
 
-5.与express结合使用
+6. 与express结合使用
 
-6.ejs案例https://github.com/mde/ejs/tree/master/examples
+7. ejs案例https://github.com/mde/ejs/tree/master/examples
