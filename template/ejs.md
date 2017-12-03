@@ -124,6 +124,30 @@ console.log(ejs.render('<@= user @>', { user: users }, { delimiter: '@' }))
 ejs.delimiter = '$';
 ```
 
+#### 视图渲染方法
+
+img_tag
+```js
+img_tag('/some.png', 'something') => "<img src='/some.png' alt='something' />"
+```
+
+link_to
+
+```js
+link_to('hello world', '/something/here') => "<a href='/something/here' >hello world</a>"
+```
+
+ ```js
+ var choices = [ {value: 1, text: 'First Choice' }, {value: 2, text: 'Second Choice'}, {value: 3, text: 'Third Choice'} ]
+ select_tag('mySelectElement', 2, choices) =>
+"<select id='mySelectElement' value='2' name='mySelectElement'>
+   <option value='1' >First Choice</option>
+   <option value='2' selected='selected'>Second Choice</option>
+   <option value='3'>Third Choice</option>
+</select>"
+
+```
+
 #### include其他文件
 ```js
 include(filename) //支持一个文件名
