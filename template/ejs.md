@@ -32,12 +32,21 @@ EJS 语法
 ```
 5. 空格
 <%_ _%>空格做截取
+ejs
 ```js
-<%for(var i = 0; i < fruits.length; ++i) {%>
+<ul>
+	 <%_ users.forEach(function(user){ _%>	 
+    <li><%= user.name %></li>
+ 	<%_ }) _%> 	
+</ul>
 ```
-支持，
-```js
-<%_               for(var i = 0; i < fruits.length; ++i) {                  -%>
+html
+```html
+<ul>
+    <li>geddy</li>
+    <li>neil</li>
+    <li>alex</li>
+</ul>
 ```
 这样也是支持的
 
@@ -109,6 +118,7 @@ ejs.renderFile('./views/index.ejs', {
 var users = ['zhangsan', 'lisi']
 console.log(ejs.render('<!= user !>', { user: users }, { delimiter: '!' }))
 console.log(ejs.render('<*= user *>', { user: users }, { delimiter: '*' }))
+console.log(ejs.render('<$= user $>', { user: users }, { delimiter: '$' }))
 console.log(ejs.render('<@= user @>', { user: users }, { delimiter: '@' }))
 
 //全局设置
