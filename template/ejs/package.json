@@ -1,8 +1,8 @@
 {
-  "name": "lihuiyin-caipiao",
-  "version": "4.0.0",
+  "name": "ejs",
+  "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "ejs.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

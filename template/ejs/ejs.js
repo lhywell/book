@@ -50,6 +50,10 @@ console.log(3333, tem2({
     body: '<h1>ddfdf</h1>'
 }))
 
+var comment = '<%# 注释是看不见的          %>'
+var comment1 = '<%# 注释是看不见的         -%>'
+console.log(ejs.render(comment))
+console.log(ejs.render(comment1))
 // console.log(tem2({
 //     name: '<p>zhhhhhhh</p>'
 // }))
@@ -74,8 +78,10 @@ console.log(2, ejs.render(str, {
 
 app.get('/', function(req, res) {
     ejs.renderFile('./views/index.ejs', {
-        title: 'dfdf',
-        body: '<h1>ddfdf</h1>'
+        title: 'test',
+        body: '<h1>dddd</h1>',
+        comment: comment1,
+        comment: comment
     }, function(err, str) {
         console.log(str)
         res.send(str)
