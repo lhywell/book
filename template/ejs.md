@@ -5,16 +5,21 @@ EJS 语法
 
 2. [语法](https://github.com/mde/ejs/blob/master/docs/syntax.md)
 
-基本格式：用肩括号百分号模板标签，必须封闭起来，中间可以写Javascript语法，<% %>，例如：<% for(var i = 0; i < fruits.length; ++i) {%>
+基本格式：用肩括号百分号模板标签，必须封闭起来，中间可以写Javascript语法，<% %>，
 
+例如：
+```js
+<% for(var i = 0; i < fruits.length; ++i) {%>
+```
 输出有两种方式:<%= %> 和 <%- %> ，分别表示html转义，非转义
 
 注释：<%#开头
 
 可以换行结束，例如：
+```js
 <% random.forEach((c, i) => {
 %>
-
+```
 <%_ _%>空格做截取
 
 <%for(var i = 0; i < fruits.length; ++i) {%>支持，
@@ -22,12 +27,14 @@ EJS 语法
 
 自定义分隔符，可以使用<? ?><! !><# #>
 
-3. ejs三种方法
+3. ejs三种渲染方法
 
 ```js
-ejs.compile
-ejs.render
-ejs.renderFile
+ejs.compile(str, options)
+ejs.render(str, data, options)
+ejs.renderFile(filename, data, options, function(err, str){
+    // str => Rendered HTML string 
+})
 ```
 ```js
 var express = require('express')
@@ -73,4 +80,4 @@ include(variable) //支持一个变量，可以通过逻辑判断加载不同的
 
 6. 与express结合使用
 
-7. ejs案例https://github.com/mde/ejs/tree/master/examples
+7. [ejs案例](https://github.com/mde/ejs/tree/master/examples)
