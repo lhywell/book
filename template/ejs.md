@@ -48,23 +48,22 @@ html
     <li>alex</li>
 </ul>
 ```
-这样也是支持的
 
 #### Options
 
-@property {Boolean} debug=false
+@property {Boolean} [debug=false]
 
-@property {Boolean} compileDebug=true
+@property {Boolean} [compileDebug=true]
 
-@property {Boolean} _with=true
+@property {Boolean} [_with=true]
 
-@property {Boolean} rmWhitespace=false
+@property {Boolean} [rmWhitespace=false]
 
-@property {Boolean} client=false
+@property {Boolean} [client=false]
 
-@property {EscapeCallback} escape={@link module:utils.escapeXML}
+@property {EscapeCallback} [escape={@link module:utils.escapeXML}]
 
-@property {String} filename=undefined
+@property {String} [filename=undefined]
 
 @property {String}  [root=undefined]
 
