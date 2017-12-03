@@ -133,4 +133,28 @@ include(variable) //支持一个变量，可以通过逻辑判断加载不同的
 
 #### 与express结合使用
 
+```js
+var express = require('express')
+var ejs = require('ejs')
+var app = express()
+var path = require('path')
+
+app.get('/', function(req, res) {
+    ejs.renderFile('./views/index.ejs', {
+        title: 'test',
+        body: '<h1>dddd</h1>'
+    }, function(err, str) {
+        console.log(str)
+        res.send(str)
+    })
+
+    // res.render(path.join(__dirname, './views/index.ejs'),{
+    //     title: 'ejs test',
+    //     body: '<h1>ddfdf</h1>'
+    // })
+})
+app.listen(3000)
+```
+可以看出ejs.renderFile和res.render功能是一样的，都是渲染
+
 #### [ejs案例](https://github.com/mde/ejs/tree/master/examples)
