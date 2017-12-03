@@ -124,7 +124,9 @@ console.log(ejs.render('<@= user @>', { user: users }, { delimiter: '@' }))
 ejs.delimiter = '$';
 ```
 
-#### 视图渲染方法
+#### 视图渲染方法等等
+| date_tag | form_tag | form_tag_end | hidden_field_tag | input_field_tag | is_current_page | link_to | submit_link_to | link_to_if | link_to_unless | link_to_unless_current | password_field_tag | select_tag | single_tag_for | start_tag_for | submit_tag | tag | tag_end | text_area_tag | text_tag | text_field_tag | url_for | img_tag |
+
 
 img_tag
 ```js
