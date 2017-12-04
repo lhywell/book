@@ -187,7 +187,7 @@ app.listen(3000)
 http://www.expressjs.com.cn/advanced/developing-template-engines.html
 
 最重要的五个方法
-1. app.engine(ext, callback)
+1. app.engine(ext, callback) // 定义模板引擎
 2. fs.readFile()
 3. String.replace()
 4. app.set('views', './views'); // 指定视图所在的位置
