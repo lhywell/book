@@ -1,7 +1,7 @@
 bower
 ====================
 
-bower包管理器
+bower包管理器,官网https://bower.io/
 
 需要全局安装
 
