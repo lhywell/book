@@ -4,12 +4,14 @@ bower
 bower包管理器
 
 需要全局安装
+
+```bash
 npm install -g bower
+```
 
 bower一共17个命令
 
 ![bower](https://raw.githubusercontent.com/lhywell/book/master/bower/bower001.png)
-
 
 
 ### bower init
@@ -18,7 +20,9 @@ Mac本成功安装，成功之后会生成一个bower.json文件，Windows系统
 ![bower](https://raw.githubusercontent.com/lhywell/book/master/bower/bower002.png)
 
 解决方案是，
+
 一种，如果是windows操作系统，在CMD或者PowerShell中键入bower init，
+
 一种，打开C:\Program Files\Git\bin\bash.exe目录，双击bash.exe，然后键入bower init
 
 问题描述：https://github.com/bower/bower/issues/802
