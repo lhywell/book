@@ -13,3 +13,4 @@
 	- [浏览器端debug模块工具](https://github.com/lhywell/book/blob/master/node/1.1debug.md)
 - [template](https://github.com/lhywell/book/blob/master/template/README.md)
 	- [ejs](https://github.com/lhywell/book/blob/master/template/ejs.md)
+- [bower](https://github.com/lhywell/book/blob/master/bower/README.md)
