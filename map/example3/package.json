@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.2"
+    "@turf/buffer": "^5.0.4",
+    "@turf/collect": "^5.0.4"
   }
 }
