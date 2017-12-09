@@ -1,6 +1,6 @@
 # Express
 
-@(笔记)[node模块]
+@(笔记)[node模块]，官网：http://expressjs.com/
 
 -------------------
 

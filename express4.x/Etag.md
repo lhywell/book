@@ -27,4 +27,4 @@ Etag中有种Weak Tag，值为 W/"xxxxx"。他声明Tag是弱匹配的，只能�
 3. 某些服务器不能精确的得到文件的最后修改时间；
 为此，HTTP/1.1引入了 Etag(Entity Tags).Etag仅仅是一个和文件相关的标记，可以是一个版本标记,比如说v1.0.0或者说"2e681a-6-5d044840"这么一串看起来很神秘的编码。但是HTTP/1.1标准并没有规定Etag的内容是什么或者说要怎么实现，唯一规定的是Etag需要放在""内。
 
-下一页：[express应用程序](https://github.com/lhywell/book/blob/master/express4.x/1.1README.md)
+上一页：[next对象](https://github.com/lhywell/book/tree/master/express4.x/1.4README.md)
