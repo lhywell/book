@@ -48,19 +48,19 @@ express xxx
 | Express 3              |    Express 4        |
 | :-------------------   | ----------------:   |
 | express.bodyParser     | [body-parser](https://github.com/expressjs/body-parser) + [multer](https://github.com/expressjs/multer)|
-| express.compress       | compression         |
-| express.cookieSession  | cookie-session      |
-| express.cookieParser   | cookie-parser       |
-| express.logger         | morgan              |
-| express.session        | express-session     |
-| express.favicon        | serve-favicon       |
-| express.responseTime   | response-time       |
-| express.errorHandler   | errorhandler        |
-| express.methodOverride | method-override     |
-| express.timeout        | method-override     |
-| express.vhost          | vhost               |
-| express.csrf           | csurf               |
-| express.directory      | serve-index         |
-| express.static         | serve-static        |
+| express.compress       | [compression](https://github.com/expressjs/compression)        |
+| express.cookieSession  | [cookie-session](https://github.com/expressjs/compression)      |
+| express.cookieParser   | [cookie-parser](https://github.com/expressjs/cookie-parser)       |
+| express.logger         | [morgan](https://github.com/expressjs/morgan)              |
+| express.session        | [express-session](https://github.com/expressjs/session)     |
+| express.favicon        | [serve-favicon](https://github.com/expressjs/serve-favicon)       |
+| express.responseTime   | [response-time](https://github.com/expressjs/response-time)       |
+| express.errorHandler   | [errorhandler](https://github.com/expressjs/errorhandler)        |
+| express.methodOverride | [method-override](https://github.com/expressjs/method-override)     |
+| express.timeout        | [connect-timeout](https://github.com/expressjs/timeout)     |
+| express.vhost          | [vhost](https://github.com/expressjs/vhost)               |
+| express.csrf           | [csurf](https://github.com/expressjs/csurf)               |
+| express.directory      | [serve-index](https://github.com/expressjs/serve-index)         |
+| express.static         | [serve-static](https://github.com/expressjs/serve-static)        |
 
 下一页：[express应用程序](https://github.com/lhywell/book/blob/master/express/1.1README.md)
