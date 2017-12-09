@@ -47,7 +47,7 @@ express xxx
 
 | Express 3              |    Express 4        |
 | :-------------------   | ----------------:   |
-| express.bodyParser     | body-parser + multer|
+| express.bodyParser     | [body-parser](https://github.com/expressjs/body-parser) + [multer](https://github.com/expressjs/multer)|
 | express.compress       | compression         |
 | express.cookieSession  | cookie-session      |
 | express.cookieParser   | cookie-parser       |
