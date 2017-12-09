@@ -42,10 +42,25 @@ express xxx
 - 内置中间件express4.x以上版本就一个内置中间件，express.static
 - 第三方中间件
 
-| Item      |    Value | Qty  |
-| :-------- | --------:| :--: |
-| Computer  | 1600 USD |  5   |
-| Phone     |   12 USD |  12  |
-| Pipe      |    1 USD | 234  |
+
+#### 第三方中间件列表
+
+| Express 3              |    Express 4        |
+| :-------------------   | ----------------:   |
+| express.bodyParser     | body-parser + multer|
+| express.compress       | compression         |
+| express.cookieSession  | cookie-session      |
+| express.cookieParser   | cookie-parser       |
+| express.logger         | morgan              |
+| express.session        | express-session     |
+| express.favicon        | serve-favicon       |
+| express.responseTime   | response-time       |
+| express.errorHandler   | errorhandler        |
+| express.methodOverride | method-override     |
+| express.timeout        | method-override     |
+| express.vhost          | vhost               |
+| express.csrf           | csurf               |
+| express.directory      | serve-index         |
+| express.static         | serve-static        |
 
 下一页：[express应用程序](https://github.com/lhywell/book/blob/master/express/1.1README.md)
