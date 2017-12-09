@@ -16,7 +16,7 @@ express核心是路由，中间件，模板引擎，通过一个express实例的
 
 #### express特点
 1. 高性能
-2. http封装
+2. 封装了Node中的Http
 3. express generator快速的构建一个应用
 
 #### express与nodejs什么关系
