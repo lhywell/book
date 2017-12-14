@@ -17,13 +17,15 @@
 	- [世纪高通](https://github.com/lhywell/book/blob/master/map/1.5README.md)
 	- [搜狗地图](https://github.com/lhywell/book/blob/master/map/1.6README.md)
 	- [超图软件](https://github.com/lhywell/book/blob/master/map/1.7README.md)
+	- [天地图](https://github.com/lhywell/book/blob/master/map/1.8README.md)
 
 	国外：
 
 	- [Mapbox](https://github.com/lhywell/book/blob/master/map/2.1README.md)
 	- [Leaflet.js](https://github.com/lhywell/book/blob/master/map/2.2README.md)
 	- [TURF](https://github.com/lhywell/book/blob/master/map/2.3README.md)
-	- [OpenLayers](https://github.com/lhywell/book/blob/master/map/2.4README.md)
+	- [Bing](https://github.com/lhywell/book/blob/master/map/2.4README.md)
+	- [OpenLayers](https://github.com/lhywell/book/blob/master/map/2.5README.md)
 
 	相关：
 
