@@ -10,9 +10,13 @@
 
 	国内：
 
-	- [百度](https://github.com/lhywell/book/blob/master/map/1.1README.md)
-	- [高德](https://github.com/lhywell/book/blob/master/map/1.2README.md)
-	- [立得空间](https://github.com/lhywell/book/blob/master/map/1.3README.md)
+	- [百度地图](https://github.com/lhywell/book/blob/master/map/1.1README.md)
+	- [高德地图](https://github.com/lhywell/book/blob/master/map/1.2README.md)
+	- [腾讯地图](https://github.com/lhywell/book/blob/master/map/1.3README.md)
+	- [立得空间](https://github.com/lhywell/book/blob/master/map/1.4README.md)
+	- [世纪高通](https://github.com/lhywell/book/blob/master/map/1.5README.md)
+	- [搜狗地图](https://github.com/lhywell/book/blob/master/map/1.6README.md)
+	- [超图软件](https://github.com/lhywell/book/blob/master/map/1.7README.md)
 
 	国外：
 
