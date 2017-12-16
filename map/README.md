@@ -19,6 +19,7 @@
 	- [超图软件](https://github.com/lhywell/book/blob/master/map/1.7README.md)
 	- [天地图](https://github.com/lhywell/book/blob/master/map/1.8README.md)
 	- [图吧](https://github.com/lhywell/book/blob/master/map/1.9README.md)
+	- [51地图](https://github.com/lhywell/book/blob/master/map/1.901README.md)
 	
 	国外：
 
@@ -26,7 +27,8 @@
 	- [Leaflet.js](https://github.com/lhywell/book/blob/master/map/2.2README.md)
 	- [TURF](https://github.com/lhywell/book/blob/master/map/2.3README.md)
 	- [Bing](https://github.com/lhywell/book/blob/master/map/2.4README.md)
-	- [OpenLayers](https://github.com/lhywell/book/blob/master/map/2.5README.md)
+	- [OpenStreetMap](https://github.com/lhywell/book/blob/master/map/2.5README.md)
+	- [OpenLayers](https://github.com/lhywell/book/blob/master/map/2.6README.md)
 
 	相关：
 
