@@ -1,0 +1,16 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".npm-init.js",
+  "config":{
+    "port":"6666"
+  },
+  "scripts": {
+    "start" : "node test.js"
+  },
+  "keywords": [
+    "npm"
+  ],
+  "author": "lihuiyin"
+}
