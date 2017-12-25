@@ -11,4 +11,3 @@
     - [CLI命令](https://github.com/lhywell/book/blob/master/node/npm/1.03.md)
     - [semver规范](https://github.com/lhywell/book/blob/master/node/npm/1.04.md)
     - [package.json](https://github.com/lhywell/book/blob/master/node/npm/1.05.md)
-    - [issues](https://github.com/lhywell/book/blob/master/node/npm/1.06.md)
