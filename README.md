@@ -7,6 +7,7 @@
 -------------------
 
 - [node](https://github.com/lhywell/book/blob/master/node/README.md)
+    - [安装](https://github.com/lhywell/book/blob/master/node/setup.md)
     - [npm](https://github.com/lhywell/book/blob/master/node/npm/README.md)
         - [npm简介](https://github.com/lhywell/book/blob/master/node/npm/1.00.md)
         - [npm工作原理](https://github.com/lhywell/book/blob/master/node/npm/1.01.md)
