@@ -15,6 +15,7 @@
         - [CLI命令](https://github.com/lhywell/book/blob/master/node/npm/1.03.md)
         - [semver规范](https://github.com/lhywell/book/blob/master/node/npm/1.04.md)
         - [package.json](https://github.com/lhywell/book/blob/master/node/npm/1.05.md)
+    - [npx](https://github.com/lhywell/book/blob/master/node/npx.md)
     - [modules](https://github.com/lhywell/book/blob/master/node/modules/README.md)
         - [浏览器端debug模块工具](https://github.com/lhywell/book/blob/master/node/modules/debug.md)
 - [express](https://github.com/lhywell/book/tree/master/express4.x/README.md)
