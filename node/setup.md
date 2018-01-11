@@ -24,6 +24,8 @@ nvm install 8.9.4
 
 如下图删掉v8.9.4文件夹，重新执行nvm install 8.9.4
 
+![npm](https://github.com/lhywell/book/blob/master/node/img/506.png)
+
 ![npm](https://github.com/lhywell/book/blob/master/node/img/502.png)
 
 如果安装还不成功，多试几次，由于node和npm是先后下载，两个都要安装成功才可以
