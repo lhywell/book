@@ -16,7 +16,7 @@ nvm install 8.9.4
 
 ![npm](https://github.com/lhywell/book/blob/master/node/img/500.png)
 
-报错的话，重新安装会提示安装成功，但是打印下node -v,还是报错，说明node没安装成功，可以执行卸载命令nvm uninstall 8.9.4，但是卸载不安静，需要把nvm root下的node 8.9.4删除后，重新安装
+报错的话，重新安装会提示安装成功，但是打印下node -v,还是报错，说明node没安装成功，可以执行卸载命令nvm uninstall 8.9.4，但是卸载不干静，需要把nvm root下的node 8.9.4删除后，重新安装
 
 ![npm](https://github.com/lhywell/book/blob/master/node/img/501.png)
 
