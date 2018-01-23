@@ -56,7 +56,7 @@ npm install --save-dev style-loader css-loader postcss-loader postcss-load-confi
 ### PostCSS在webpack中的配置
 
 通过vue-cli构建的vue应用集成了webpack的基础配置，你需要找到build/webpack.base.conf.js中module/rules增加
-
+webpack.base.conf.js
 ```js
 {
 	test: /\.css$/,
@@ -71,7 +71,7 @@ npm install --save-dev style-loader css-loader postcss-loader postcss-load-confi
 },
 ```
 postcss-loader有一个配置文件postcss.config.js，然后新建一个postcss.config.js文件,统一管理插件需要把之前安装的包放到plugins里面，并且采用默认配置，默认配置就是空对象，不使用某个插件就是false
-
+postcss.config.js
 ```js
 module.exports = {
   parser: false,
@@ -88,7 +88,7 @@ module.exports = {
   }
 }
 ```
-postcss-loader会在文件中遍历查找这个配置文件，所以不需要手动配置路径查找，采用默认的方式就好，当然也支持指定路径，需要在webpack.base.config.js中配置，这个看![postcss-loader](https://github.com/postcss/postcss-loader)文档
+postcss-loader会在文件中遍历查找这个配置文件，所以不需要手动配置路径查找，采用默认的方式就好，当然也支持指定路径，需要在webpack.base.config.js中配置，这个看[postcss-loader](https://github.com/postcss/postcss-loader)文档
 ```js
 {
   loader: 'postcss-loader',
@@ -102,7 +102,7 @@ postcss-loader会在文件中遍历查找这个配置文件，所以不需要手
 
 ### 在vue组件中引用样式
 之后需要在每个vue文件中引入相应的组件样式
-
+HelloWorld.vue
 ```js
 <template>
   <div class="hello">
@@ -243,6 +243,7 @@ a {
 ### 更改引入路径
 之前每个组件路径引入都是在根目录下，'./src/assets/css...',现在为了统一引入的方便，我们把入口改下，
 
+postcss.config.js
 ```js
 module.exports = {
   parser: false,
