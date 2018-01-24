@@ -17,7 +17,7 @@ npm install -g postcss-cli
 ```node
 npm install --save-dev postcss-cli
 ```
-
+安装完了就可以看下postcss可执行哪些命令
 ```js
 // 1. 先看下这个命令有哪些参数可以用
 postcss --help
@@ -81,14 +81,14 @@ https://github.com/postcss/autoprefixer
 npm install --save-dev style-loader css-loader postcss-loader postcss-load-config postcss-import postcss-simple-vars postcss-extend postcss-nested
 ```
 
-安装完后，你会发现在package.json中devDependencies字段增加了style-loader css-loader、postcss-loader、postcss-load-config、postcss-import、postcss-simple-vars、postcss-extend、postcss-nested这些内容
+安装完后，你会发现在package.json中devDependencies字段增加了style-loader、css-loader、postcss-loader、postcss-load-config、postcss-import、postcss-simple-vars、postcss-extend、postcss-nested这些内容
 
 ### PostCSS在webpack中的配置
 
 通过vue-cli构建的vue应用集成了webpack的基础配置，你需要找到build/webpack.base.conf.js中module/rules增加
 
 webpack.base.conf.js
-```js
+```webpack
 {
 	test: /\.css$/,
 	use: [
