@@ -1,4 +1,4 @@
-# vue项目中postcss与webpack
+# vue项目中的postcss与webpack配置
 
 @(笔记)[css]
 
@@ -101,7 +101,7 @@ webpack.base.conf.js
 	]
 },
 ```
-postcss-loader有一个配置文件postcss.config.js，然后新建一个postcss.config.js文件，统一管理插件需要把之前安装的包放到plugins里面，并且采用默认配置，默认配置就是空对象，不使用某个插件就是false，没有在配置文件里声明的插件是不会生效的，所以配置文件很重要
+postcss-loader有一个配置文件postcss.config.js，然后新建一个postcss.config.js文件，统一管理插件需要把之前安装的包放到plugins里面，并且采用默认配置，默认配置就是空对象，不使用某个插件就是false，没有在配置文件里声明的插件是不会生效的，所以配置文件很重要，每个插件也可以定义option，关于插件的option配置需要查询每个插件自定义的配置，关于配置文件[postcss-load-config](https://github.com/michael-ciniawsky/postcss-load-config)
 
 postcss.config.js
 ```js
