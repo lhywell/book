@@ -412,6 +412,7 @@ $column: 200px;
 需要安装postcss-font-magician插件，并把它写入到插件配置postcss.config.js,
 自定义font-face规则，需要定义一个名字，并把字体所在的路径写入，css文件中引入定义的名字，下面定义了一个icomoon名字。
 
+postcss.config.js
 ```js
 module.exports = {
   parser: false,
@@ -448,7 +449,7 @@ module.exports = {
   }
 }
 ```
-
+icon.css
 ```css
 [class^="icon-"],
 [class*=" icon-"] {
@@ -476,5 +477,47 @@ module.exports = {
 ```
 
 ### 引入继承
+因为我们加入了postcss-extend插件，可以支持继承的，试下
+```html
+<div>extend用法：
+  <span class="delta">extend</span>
+  <span class="bravo">extend</span>
+  <span class="alpha">extend</span>
+  <span class="charlie">extend</span>
+</div>
+```
 
+```css
+.delta {
+  color: #ffffff;
+  background: gray;
+}
+
+.charlie {
+  @extend .delta;
+  font-weight: bold;
+}
+.alpha {
+  @extend .bravo;
+  color: red;
+}
+.bravo {
+  @extend .charlie;
+  background: blue;
+}
+```
+解析后
+```
+.delta[data-v-ab5bb33e], .charlie[data-v-ab5bb33e], .bravo[data-v-ab5bb33e], .alpha[data-v-ab5bb33e] {
+    color: #ffffff;
+    background: gray;
+}
+.bravo[data-v-ab5bb33e], .alpha[data-v-ab5bb33e] {
+    background: blue;
+}
+.charlie[data-v-ab5bb33e], .bravo[data-v-ab5bb33e], .alpha[data-v-ab5bb33e] {
+    font-weight: bold;
+}
+```
 ### 引入mix
+mix用法，变动是最大的
