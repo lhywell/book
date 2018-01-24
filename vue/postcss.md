@@ -74,11 +74,15 @@ https://github.com/postcss/postcss-mixins
 
 https://github.com/postcss/autoprefixer
 
+https://github.com/postcss/postcss-url
+
+https://github.com/jonathantneal/postcss-font-magician
+
 注意：插件提供了与 Sass 几乎相同的语法,但有一些语法略微不同(比如 postcss-mixins 更强大)，所以更多信息请在上面的页面中确认。
 
 然后用一行命令安装它们：
 ```node
-npm install --save-dev style-loader css-loader postcss-loader postcss-load-config postcss-import postcss-simple-vars postcss-extend postcss-nested
+npm install --save-dev style-loader css-loader postcss-loader postcss-load-config postcss-import postcss-simple-vars postcss-extend postcss-nested postcss-font-magician
 ```
 
 安装完后，你会发现在package.json中devDependencies字段增加了style-loader、css-loader、postcss-loader、postcss-load-config、postcss-import、postcss-simple-vars、postcss-extend、postcss-nested这些内容
@@ -181,7 +185,7 @@ export default {
 </style>
 
 ```
-hello.vue
+Hello.vue
 
 ```vue
 <template>
@@ -247,7 +251,7 @@ a{
 于是执行npm run dev，你会看到样式已经加载进了页面，当你改动css文件的内容，webpack也会实时进行监听，不需要重新编译。
 
 ### 更改引入路径
-之前每个组件路径引入都是在根目录下，'./src/assets/css/XXX.css',现在为了统一引入的方便，我们把入口改下，
+之前每个组件的样式文件，路径引入都是在根目录下，'./src/assets/css/XXX.css',现在为了统一引入的方便，我们把入口改下，
 
 postcss.config.js
 ```js
@@ -262,15 +266,18 @@ module.exports = {
     "postcss-simple-vars": {},
     "postcss-extend": {},
     "postcss-nested": {},
-    "postcss-mixins": {}
+    "postcss-mixins": {},
+    "postcss-cssnext": {},
+    "postcss-url": { url: 'inline' }
   }
 }
+
 
 ```
 看到from字段，改成一个'./src/assets/css/main.css'文件，这个文件可以作为所有样式文件的入口，相应的其他vue文件的引入也要改成
 
-HelloWorld.vue
-```js
+Hello.vue
+```vue
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
@@ -304,7 +311,7 @@ export default {
 @import './hello/hello.css'
 </style>
 ```
-可以看到文件HelloWorld.vue组件引入样式文件，变更为'./map/map.css'
+可以看到文件Hello.vue组件引入样式文件，变更为'./hello/hello.css'
 
 ### 引入import
 最重要的一点就是如果引用一个以上文件的话，尾部一定加上分号，否则解析不了
@@ -336,6 +343,31 @@ export default {
     margin: 10px 0;
 }
 ```
+### 引入url
+postcss-url插件，是定义了rebase,inline,copy三种模式，在本文中，我们采用inline模式,"postcss-url": { url: 'inline' }
+
+inline模式，是从vue组件的位置作为根目录，定义url，路径定义准确的话，解析后会通过webpack对图片进行base64的转化。
+
+```css
+.bg {
+  background: url('../assets/images/logo.png');
+  background-size: 40px 40px;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+```
+解析后
+```css
+.bg[data-v-26256330] {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAAAAGXRFW…JEoVCCKBRKEIVCCaJQKJQgCoUSRKFQgigUShCFIhP8vwADACog5YM65zugAAAAAElFTkSuQmCC);
+    background-size: 40px 40px;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+```
+
 ### 引入嵌套
 因为我们加入了postcss-nested插件，可以支持嵌套的样式，试下
 ```css
@@ -376,6 +408,73 @@ $column: 200px;
     margin-$(dir): 10px;
 }
 ```
-### 引入
-### 引入mix
+### 引入自定义@font-face规则
+需要安装postcss-font-magician插件，并把它写入到插件配置postcss.config.js,
+自定义font-face规则，需要定义一个名字，并把字体所在的路径写入，css文件中引入定义的名字，下面定义了一个icomoon名字。
+
+```js
+module.exports = {
+  parser: false,
+  map: false,
+  from: './src/assets/css/main.css',
+  to: '',
+  plugins: {
+    "autoprefixer": {},
+    "postcss-import": {},
+    "postcss-simple-vars": {},
+    "postcss-extend": {},
+    "postcss-nested": {},
+    "postcss-mixins": {},
+    "postcss-cssnext": {},
+    "postcss-font-magician": {
+      custom: {
+        'icomoon': {
+          variants: {
+            normal: {
+              400: {
+                url: {
+                  woff: './src/assets/css/common/fonts/icomoon.woff',
+                  ttf: './src/assets/css/common/fonts/icomoon.ttf',
+                  eot: './src/assets/css/common/fonts/icomoon.eot',
+                  svg: './src/assets/css/common/fonts/icomoon.svg'
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "postcss-url": { url: 'inline' }
+  }
+}
+```
+
+```css
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/*工具栏*/
+
+.icon-circle:before {
+    content: "\e903";
+    @include tool-icon;
+    margin-right: 8px;
+}
+```
+
 ### 引入继承
+
+### 引入mix
