@@ -214,8 +214,7 @@ export default {
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-@import './hello/hello.css'
-
+@import './src/assets/css/hello.css'
 </style>
 
 ```
@@ -243,7 +242,7 @@ a{
 }
 
 ```
-在每个vue组件中，应用了独立的样式，这样可以做到组件间样式分离，彼此不影响，如果你之前用过Sass，一定知道Sass是实现不了样式分离的，比如说在一个组件样式里定义了a属性，会泛滥到全局，我通常的解决方案是为每个组件定义一个特殊不重复的id，然后所有的样式嵌套在id下，这样不会泛滥到全局，这是对于开发经验久的人比较管用，但是经常会碰到一个实习生，或者开发经验1年所有的新手，会在组件样式里写类似.content这种重名风险高的类名，会导致整个页面渲染失效，所以总结来说，PostCss在这方面处理的还是非常好的。
+在每个vue组件中，应用了独立的样式，这样可以做到组件间样式分离，彼此不影响，如果你之前用过Sass，一定知道Sass是实现不了样式分离的，比如说在一个组件样式里定义了a属性，会泛滥到全局，我通常的解决方案是为每个组件定义一个特殊不重复的id，然后所有的样式嵌套在id下，这样不会泛滥到全局，这是对于开发经验久的人比较管用。在多人协同开发，经常会碰到一个实习生，或者开发经验1年所有的新手，会在组件样式里写类似.content这种重名风险高的类名，恰好你也在自己的组件中定义了#dashboard .content，这样别的组件的.content样式会继承过来，会导致整个页面样式乱掉，所以总结来说，PostCss在这方面处理的还是非常好的。
 
 于是执行npm run dev，你会看到样式已经加载进了页面，当你改动css文件的内容，webpack也会实时进行监听，不需要重新编译。
 
@@ -275,110 +274,35 @@ HelloWorld.vue
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
     <ul>
       <li>
-        <a
-          href="https://vuejs.org"
-          target="_blank"
-        >
-          Core Docs
+        <a href="https://github.com/postcss?page=1" target="_blank">
+          postcss Docs
         </a>
       </li>
       <li>
-        <a
-          href="https://forum.vuejs.org"
-          target="_blank"
-        >
-          Forum
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://chat.vuejs.org"
-          target="_blank"
-        >
-          Community Chat
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://twitter.com/vuejs"
-          target="_blank"
-        >
-          Twitter
-        </a>
-      </li>
-      <br>
-      <li>
-        <a
-          href="http://vuejs-templates.github.io/webpack/"
-          target="_blank"
-        >
-          Docs for This Template
+        <a href="https://github.com/postcss/postcss/blob/master/README.cn.md" target="_blank">
+          readme
         </a>
       </li>
     </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li>
-        <a
-          href="http://router.vuejs.org/"
-          target="_blank"
-        >
-          vue-router
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vuex.vuejs.org/"
-          target="_blank"
-        >
-          vuex
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vue-loader.vuejs.org/"
-          target="_blank"
-        >
-          vue-loader
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-        >
-          awesome-vue
-        </a>
-      </li>
-    </ul>
-    <HeadM></HeadM>
   </div>
 </template>
-
 <script>
-import HeadM from './HeadM'
-
 export default {
-  name: 'HelloWorld',
-  data () {
+  name: 'hello',
+  data() {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to PostCss App'
     }
-  },
-  components:{
-    HeadM
   }
 }
-</script>
 
+</script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-@import './map/map.css'
+@import './hello/hello.css'
 </style>
-
 ```
 可以看到文件HelloWorld.vue组件引入样式文件，变更为'./map/map.css'
 
